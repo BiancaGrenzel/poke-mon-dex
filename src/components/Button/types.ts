@@ -1,6 +1,6 @@
 export interface ButtonProps {
-    children: React.ReactNode;
-    onClick: () => void;
+    children?: React.ReactNode;
+    onClick?: () => void;
     disabled?: boolean;
     variant?: 'contained' | 'outlined' | 'text';
     color?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
