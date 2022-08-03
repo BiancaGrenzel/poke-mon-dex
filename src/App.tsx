@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "../src/styles/tokens/index";
