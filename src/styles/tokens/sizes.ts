@@ -8,4 +8,5 @@ export const sizes = {
   xl: "48px",
   xxl: "64px",
   xxxl: "80px",
+  xxxxl: "160px",
 };
