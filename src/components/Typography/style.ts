@@ -49,5 +49,5 @@ export const StyledTypography = styled.p<StyledTypographyProps>`
   ${({ variant }) => variant && variantModifiers[variant]};
   ${({ color }) => color && colorModifiers[color]};
   ${({ weight }) => weight && weightModifiers[weight]};
-  width: auto;
+  margin: 0;
 `;
