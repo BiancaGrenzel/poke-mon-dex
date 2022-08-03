@@ -23,7 +23,7 @@ const colorModifiers = {
     color: ${({ theme }) => theme.colors.black};
   `,
   gray: () => css`
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.darkGray};
   `,
 };
 
