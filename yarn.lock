@@ -765,13 +765,6 @@
   "resolved" "https://registry.npmjs.org/@tsconfig/node16/-/node16-1.0.3.tgz"
   "version" "1.0.3"
 
-"@types/accepts@*":
-  "integrity" "sha512-jOdnI/3qTpHABjM5cx1Hc0sKsPoYCp+DP/GJRGtDlPd7fiV9oXGGIcjW/ZOxLIvjGz8MA+uMZI9metHlgqbgwQ=="
-  "resolved" "https://registry.npmjs.org/@types/accepts/-/accepts-1.3.5.tgz"
-  "version" "1.3.5"
-  dependencies:
-    "@types/node" "*"
-
 "@types/aria-query@^4.2.0":
   "integrity" "sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig=="
   "resolved" "https://registry.npmjs.org/@types/aria-query/-/aria-query-4.2.2.tgz"
@@ -829,14 +822,6 @@
   dependencies:
     "@types/react" "*"
     "hoist-non-react-statics" "^3.3.0"
-
-"@types/http-context@^1.1.0":
-  "integrity" "sha512-DzLWDPHVnuyovQbXCyIBxTsF75oqF1PrS9a5C79YIM33ryzzYsj0hFr8S55do+G64IAHaP3wnmaNdAn7nYIN4g=="
-  "resolved" "https://registry.npmjs.org/@types/http-context/-/http-context-1.1.0.tgz"
-  "version" "1.1.0"
-  dependencies:
-    "@types/accepts" "*"
-    "@types/node" "*"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   "integrity" "sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g=="
