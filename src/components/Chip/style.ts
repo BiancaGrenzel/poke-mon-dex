@@ -85,8 +85,8 @@ export type StyledChipProps = {
 export const StyledChip = styled.button<StyledChipProps>`
   width: auto;
   color: ${({ theme }) => theme.colors.white};
-  padding: ${({ theme }) => theme.spaces.xs + " " + theme.spaces.sm};
-  border-radius: ${({ theme }) => theme.spaces.xxs};
+  padding: ${({ theme }) => theme.sizes.xs + " " + theme.sizes.sm};
+  border-radius: ${({ theme }) => theme.sizes.xxs};
   ${({ pokemonType }) => pokemonType && colorsModifiers[pokemonType]};
   border: none;
 `;

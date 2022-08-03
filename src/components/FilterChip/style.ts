@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledFilterChip = styled.button`
   width: auto;
   color: ${({ theme }) => theme.colors.red};
-  padding: ${({ theme }) => theme.spaces.xs + " " + theme.spaces.sm};
-  border-radius: ${({ theme }) => theme.spaces.xl};
+  padding: ${({ theme }) => theme.sizes.xs + " " + theme.sizes.sm};
+  border-radius: ${({ theme }) => theme.sizes.xl};
   border: 1px solid ${({ theme }) => theme.colors.red};
   background-color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
