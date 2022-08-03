@@ -4,14 +4,14 @@ import * as Theme from "../../styles/tokens/index";
 import Chip from "./index";
 
 describe("Chip Component", () => {
-  it("should render children", () => {
+  it("should render text", () => {
     const { getByTestId } = render(
       <ThemeProvider theme={Theme}>
-        <Chip pokemonType="dragon" children="Teste" />
+        <Chip pokemonType="dragon"/>
       </ThemeProvider>
     );
 
-    expect(getByTestId("chip-text")).toBeInTheDocument();
+    expect(getByTestId("chip-text")).toHaveTextContent("Dragon");
   });
 
   it("should render with correct color", () => {
@@ -24,6 +24,11 @@ describe("Chip Component", () => {
     expect(getByTestId("chip-component")).toHaveStyleRule(
       "background-color",
       Theme.colors.dragon
+    );
+
+    expect(getByTestId("chip-component")).toHaveStyleRule(
+      "color",
+      Theme.colors.white
     );
   });
 });
