@@ -1,15 +1,13 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import Routes from "./routes";
 import { DataContextProvider } from "./store/context";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <StrictMode>
+  <React.StrictMode>
     <DataContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <Routes/>
     </DataContextProvider>
-  </StrictMode>
+  </React.StrictMode>
 );
