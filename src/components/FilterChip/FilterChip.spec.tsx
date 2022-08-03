@@ -7,17 +7,17 @@ describe("FilterChip Component", () => {
   it("should render text", () => {
     const { getByTestId } = render(
       <ThemeProvider theme={Theme}>
-        <FilterChip pokemonType="dragon"/>
+        <FilterChip pokemonType="dragon" />
       </ThemeProvider>
     );
 
-    expect(getByTestId("filterchip-text")).toHaveTextContent("Dragon");
+    expect(getByTestId("typography-component")).toHaveTextContent("Dragon");
   });
 
   it("should click on filter chip", () => {
     const { getByTestId } = render(
       <ThemeProvider theme={Theme}>
-        <FilterChip pokemonType="dragon" children="Teste" />
+        <FilterChip pokemonType="dragon"/>
       </ThemeProvider>
     );
 
