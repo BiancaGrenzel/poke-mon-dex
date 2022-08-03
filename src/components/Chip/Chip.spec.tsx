@@ -11,7 +11,7 @@ describe("Chip Component", () => {
       </ThemeProvider>
     );
 
-    expect(getByTestId("chip-text")).toHaveTextContent("Dragon");
+    expect(getByTestId("typography-component")).toHaveTextContent("Dragon");
   });
 
   it("should render with correct color", () => {

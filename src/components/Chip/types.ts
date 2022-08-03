@@ -1,5 +1,5 @@
 export interface ChipProps
-  extends React.ButtonHTMLAttributes<HTMLDivElement> {
+  extends React.HTMLAttributes<HTMLButtonElement> {
   pokemonType?:
     | "fire"
     | "normal"
