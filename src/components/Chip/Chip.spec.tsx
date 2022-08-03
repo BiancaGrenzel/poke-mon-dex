@@ -1,7 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import * as Theme from "../../styles/tokens/index";
-import "jest-styled-components";
 import Chip from "./index";
 
 describe("Chip Component", () => {
