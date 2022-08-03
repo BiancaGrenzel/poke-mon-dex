@@ -1,37 +1,25 @@
 export const colors = {
-  primary: {
-    light: "#00bcd4",
-    main: "#009688",
-    dark: "#00695c",
-  },
-  secondary: {
-    light: "#ff9800",
-    main: "#ff5722",
-    dark: "#c62828",
-  },
-  success: {
-    light: "#8bc34a",
-    dark: "#388e3c",
-  },
-  error: {
-    light: "#f44336",
-    dark: "#d32f2f",
-  },
-  warning: {
-    light: "#ffc107",
-    dark: "#f57c00",
-  },
-  info: {
-    light: "#2196f3",
-    dark: "#0d47a1",
-  },
-  text: {
-    light: "#757575",
-    dark: "#212121",
-  },
-  neutral: {
-    light: "#fafafa",
-    main: "#f5f5f5",
-    dark: "#e0e0e0",
-  }
+  black: "#333333",
+  darkGray: "#828282",
+  lightGray: "#F2F2F2",
+  red: "#E2350D",
+  white: "#FFFFFF",
+  fire: "#EE7F33",
+  normal: "#A9A778",
+  water: "#6890F0",
+  grass: "#78C84F",
+  ice: "#98D8D7",
+  poison: "#A040A1",
+  ground: "#E0C069",
+  flying: "#A790EF",
+  bug: "#A8B821",
+  rock: "#B6A037",
+  ghost: "#705797",
+  dragon: "#724EF9",
+  dark: "#6F5848",
+  steel: "#B8B8D0",
+  fairy: "#F4C8E2",
+  psychic: "#E95587",
+  electric: "#F8CF32",
+  fighting: "#C03228",
 };
