@@ -19,4 +19,5 @@ export interface ChipProps
     | "psychic"
     | "electric"
     | "fighting";
+    alt?: string;
 }

@@ -6,7 +6,10 @@ const Chip = ({ pokemonType }: ChipProps) => {
   const pokemonTypeCaptalized =
     pokemonType && pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1);
   return (
-    <StyledChip pokemonType={pokemonType} data-testid="chip-component">
+    <StyledChip
+      pokemonType={pokemonType}
+      data-testid={`chip-${pokemonType}`}
+    >
       <Typography data-testid="chip-text" variant="body" weight="normal">
         {pokemonTypeCaptalized}
       </Typography>
