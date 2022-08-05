@@ -13,6 +13,11 @@ export const Container = styled.div`
 `;
 
 export const StyledImage = styled.img`
-    width: 100%;
-    height: 100%;
-`
+  width: 100%;
+  height: 100%;
+`;
+
+export const StyledObject = styled.object`
+  max-width: 100%;
+  max-height: 100%;
+`;
