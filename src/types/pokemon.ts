@@ -17,3 +17,24 @@ export type PokemonTypes =
   | "psychic"
   | "electric"
   | "fighting";
+
+export type Pokemon = {
+  national_number: string;
+  evolution: any;
+  sprites: Sprites;
+  name: string;
+  type: PokemonTypes[];
+  total: number;
+  hp: number;
+  attack: number;
+  defense: number;
+  sp_atk: number;
+  sp_def: number;
+  speed: number;
+};
+
+export type Sprites = {
+  normal: string;
+  large: string;
+  animated: string;
+};
