@@ -9,13 +9,15 @@ interface IContext {
 }
 
 export const DataContextProvider = ({ children }: IContext) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [oldOffsetHeight, setOldOffsetHeight] = useState(
+    document.documentElement.offsetHeight
+  );
 
   return (
     <DataContext.Provider
       value={{
-        isOpen,
-        setIsOpen,
+        oldOffsetHeight,
+        setOldOffsetHeight,
       }}
     >
       {children}
@@ -25,8 +27,8 @@ export const DataContextProvider = ({ children }: IContext) => {
 
 // Context Hook
 interface IDataContext {
-  isOpen: boolean;
-  setIsOpen: (arg?: boolean) => void;
+  oldOffsetHeight: number;
+  setOldOffsetHeight: (value: number) => void;
 }
 
 export const useDataContext = () => useContext(DataContext) as IDataContext;
