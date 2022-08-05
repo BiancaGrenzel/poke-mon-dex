@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { PokemonTypes } from "../../types";
 
 const colorsModifiers = {
   fire: () => css`
@@ -61,28 +62,10 @@ const colorsModifiers = {
 };
 
 export type StyledChipProps = {
-  pokemonType?:
-    | "fire"
-    | "normal"
-    | "water"
-    | "grass"
-    | "ice"
-    | "poison"
-    | "ground"
-    | "flying"
-    | "bug"
-    | "rock"
-    | "ghost"
-    | "dragon"
-    | "dark"
-    | "steel"
-    | "fairy"
-    | "psychic"
-    | "electric"
-    | "fighting";
+  pokemonType: PokemonTypes;
 };
 
-export const StyledChip = styled.button<StyledChipProps>`
+export const StyledChip = styled.div<StyledChipProps>`
   width: auto;
   color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.sizes.xs + " " + theme.sizes.sm};
