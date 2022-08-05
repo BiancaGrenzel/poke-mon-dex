@@ -1,10 +1,9 @@
-import Chip from "../../components/Chip";
+import CardList from "../../components/Card-List";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <Chip pokemonType="dragon">Dragon</Chip>
+      <CardList />
     </div>
   );
 };
