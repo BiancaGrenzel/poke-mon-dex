@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { IPokemon } from "../../pages/Home/types";
 import { getPokemons } from "../../services/api";
 import { useDataContext } from "../../store/context";
+import { Pokemon } from "../../types";
 import Card from "../Card/index";
 import { ContainerCards } from "./style";
 
 const CardList = () => {
-  const [allPokemons, setAllPokemons] = useState<IPokemon[]>([]);
+  const [allPokemons, setAllPokemons] = useState<Pokemon[]>([]);
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
   const { oldOffsetHeight } = useDataContext();
@@ -20,7 +20,7 @@ const CardList = () => {
   useEffect(() => {
     getPokemons().then((data) => {
       setTotalPage(data.length / postsForPage);
-      let newPokemons = data.splice(0, postsForPage);
+      let newPokemons = data.splice(allPokemons.length, postsForPage);
       setAllPokemons([...allPokemons, ...newPokemons]);
     });
   }, [page]);
@@ -36,10 +36,11 @@ const CardList = () => {
   }
 
   return (
-    <ContainerCards>
+    <ContainerCards data-testid="container-cards">
       {allPokemons.map((pokemon, index) => {
         return (
           <Card
+            data-testid={`card-${index}`}
             key={index}
             pokemonNumber={pokemon.national_number}
             pokemonName={pokemon.name}
