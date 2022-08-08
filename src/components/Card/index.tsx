@@ -1,7 +1,8 @@
 import Chip from "../Chip";
+import ChipList from "../Chip-List";
 import Photo from "../Photo";
 import { Typography } from "../Typography";
-import { BoxChips, Container } from "./style";
+import { Container } from "./style";
 import { CardProps } from "./type";
 
 const Card = ({
@@ -12,22 +13,16 @@ const Card = ({
   pokemonName,
   pokemonType,
 }: CardProps) => {
-  const renderChips = () => {
-    return pokemonType.map((type) => {
-      return <Chip pokemonType={type} key={type} />;
-    });
-  };
-
   return (
-    <Container>
-      <Photo id={idPhoto} alt={altPhoto} src={srcPhoto} />
+    <Container data-testid="container-card">
+      <Photo id={idPhoto} alt={altPhoto} src={srcPhoto} data-testid="photo" />
       <Typography variant="body" color="gray" weight="normal">
         {pokemonNumber}
       </Typography>
       <Typography variant="subtitle" color="black" weight="bold">
         {pokemonName}
       </Typography>
-      <BoxChips>{renderChips()}</BoxChips>
+      <ChipList pokemonType={pokemonType} />
     </Container>
   );
 };

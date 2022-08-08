@@ -8,8 +8,3 @@ export const Container = styled.div`
     height: auto;
     gap: ${({ theme }) => theme.sizes.xs};
 `
-
-export const BoxChips = styled.div`
-    display: flex;
-    gap: 8px;
-`
