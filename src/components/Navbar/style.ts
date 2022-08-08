@@ -25,4 +25,5 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.sizes.md};
+  cursor: pointer;
 `;

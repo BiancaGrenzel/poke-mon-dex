@@ -4,12 +4,14 @@ import Synvia from "../../assets/imgs/synvia-A.svg";
 import { Typography } from "../Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <Container>
-      <Box>
+      <Box onClick={() => navigate('/app/home')}>
         <Logo src={Pokeball} />
         <Typography variant="title" color="white" weight="bold">
           Pokédex
