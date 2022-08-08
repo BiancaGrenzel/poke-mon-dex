@@ -3,7 +3,7 @@ import ChipList from "../Chip-List";
 import Photo from "../Photo";
 import { Typography } from "../Typography";
 import { Container } from "./style";
-import { CardProps } from "./type";
+import { CardProps } from "./types";
 
 const Card = ({
   idPhoto,
