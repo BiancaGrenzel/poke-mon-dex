@@ -7,12 +7,13 @@ export type Props = {
 };
 
 export const filterPokemons = ({ allPokemons, text, type }: Props) => {
+  const textToLower = text.charAt(0).toLowerCase();
   if (text === "" && type.length === 0) {
     return allPokemons;
   }
   if (text !== "" && type.length === 0) {
     return allPokemons.filter((pokemon) =>
-      pokemon.name.toLowerCase().includes(text)
+      pokemon.name.toLowerCase().includes(textToLower)
     );
   }
   if (text === "" && type.length > 0) {
@@ -24,7 +25,7 @@ export const filterPokemons = ({ allPokemons, text, type }: Props) => {
   if (text !== "" && type.length > 0) {
     return allPokemons.filter(
       (pokemon) =>
-        pokemon.name.includes(text) &&
+        pokemon.name.includes(textToLower) &&
         pokemon.type.sort().join(",").toLowerCase() === type.sort().join(",")
     );
   }
