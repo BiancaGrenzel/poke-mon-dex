@@ -1,17 +1,18 @@
 import { Typography } from "../Typography";
 import { StyledChip } from "./style";
 import { ChipProps } from "./types";
+import { StyledChipProps } from "./style";
 
 const Chip = ({ pokemonType }: ChipProps) => {
-  const pokemonTypeCaptalized =
-    pokemonType && pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1);
+  const pokemonToLowerCase = pokemonType?.toLowerCase() ?? "fire";
+
   return (
     <StyledChip
-      pokemonType={pokemonType}
+      pokemonType={pokemonToLowerCase as StyledChipProps["pokemonType"]}
       data-testid={`chip-${pokemonType}`}
     >
       <Typography data-testid="chip-text" variant="body" weight="normal">
-        {pokemonTypeCaptalized}
+        {pokemonType}
       </Typography>
     </StyledChip>
   );
