@@ -12,9 +12,7 @@ const Routes = () => {
     <BrowserRouter>
       <RoutesWrapper>
         <Route element={<App />}>
-          <Route path="app">
-            <Route path="home" element={<Home />} />
-          </Route>
+          <Route index element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </RoutesWrapper>
