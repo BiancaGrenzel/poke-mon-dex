@@ -7,14 +7,22 @@ export type Props = {
 };
 
 export const filterPokemons = ({ allPokemons, text, type }: Props) => {
-  const textToLower = text.charAt(0).toLowerCase();
+  const isTextNumber = !isNaN(Number(text));
+
   if (text === "" && type.length === 0) {
     return allPokemons;
   }
   if (text !== "" && type.length === 0) {
-    return allPokemons.filter((pokemon) =>
-      pokemon.name.toLowerCase().includes(textToLower)
-    );
+    if (isTextNumber === true) {
+      return allPokemons.filter(
+        (pokemon) =>
+          pokemon.national_number === text || pokemon.name.includes(text)
+      );
+    } else {
+      return allPokemons.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(text.toLowerCase())
+      );
+    }
   }
   if (text === "" && type.length > 0) {
     return allPokemons.filter(
@@ -23,10 +31,20 @@ export const filterPokemons = ({ allPokemons, text, type }: Props) => {
     );
   }
   if (text !== "" && type.length > 0) {
-    return allPokemons.filter(
-      (pokemon) =>
-        pokemon.name.includes(textToLower) &&
-        pokemon.type.sort().join(",").toLowerCase() === type.sort().join(",")
-    );
+    return allPokemons.filter((pokemon) => {
+      if (isTextNumber === true) {
+        return (
+          pokemon.national_number === text ||
+          (pokemon.name.includes(text) &&
+            pokemon.type.sort().join(",").toLowerCase() ===
+              type.sort().join(","))
+        );
+      } else {
+        return (
+          pokemon.name.toLowerCase().includes(text.toLowerCase()) &&
+          pokemon.type.sort().join(",").toLowerCase() === type.sort().join(",")
+        );
+      }
+    });
   }
 };
