@@ -4,7 +4,7 @@ export const ContainerCards = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.sizes.lg};
   flex-wrap: wrap;
-  max-height: calc(100vh - 240px);
+  max-height: calc(100vh - 320px);
   overflow: auto;
   justify-self: flex-end;
   align-items: flex-start;
