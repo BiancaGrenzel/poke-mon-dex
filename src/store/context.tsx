@@ -1,4 +1,5 @@
 import { useState, createContext, useContext } from "react";
+import { Pokemon, PokemonTypes } from "../types";
 
 // Context
 export const DataContext = createContext({});
@@ -9,15 +10,22 @@ interface IContext {
 }
 
 export const DataContextProvider = ({ children }: IContext) => {
-  const [oldOffsetHeight, setOldOffsetHeight] = useState(
-    document.documentElement.offsetHeight
-  );
+  const [filteredTypes, setFilteredTypes] = useState<PokemonTypes[]>([]);
+  const [filteredPokemons, setFilteredPokemons] = useState<Pokemon[]>([]);
+  const [allPokemons, setAllPokemons] = useState<Pokemon[]>([]);
+  const [search, setSearch] = useState<string>("");
 
   return (
     <DataContext.Provider
       value={{
-        oldOffsetHeight,
-        setOldOffsetHeight,
+        filteredTypes,
+        setFilteredTypes,
+        filteredPokemons,
+        setFilteredPokemons,
+        allPokemons,
+        setAllPokemons,
+        search,
+        setSearch,
       }}
     >
       {children}
@@ -27,8 +35,14 @@ export const DataContextProvider = ({ children }: IContext) => {
 
 // Context Hook
 interface IDataContext {
-  oldOffsetHeight: number;
-  setOldOffsetHeight: (value: number) => void;
+  filteredTypes: PokemonTypes[];
+  setFilteredTypes: (filteredType: PokemonTypes[]) => void;
+  filteredPokemons: Pokemon[];
+  setFilteredPokemons: (filteredPokemons: Pokemon[]) => void;
+  allPokemons: Pokemon[];
+  setAllPokemons: (allPokemons: Pokemon[]) => void;
+  search: string;
+  setSearch: (search: string) => void;
 }
 
 export const useDataContext = () => useContext(DataContext) as IDataContext;
