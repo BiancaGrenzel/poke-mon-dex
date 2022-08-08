@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Box } from "../../layouts";
-import { useDataContext } from "../../store/context";
+import { useDataContext } from "../../context";
 import { PokemonTypes } from "../../types";
 import FilterChip from "../Filter-Chip";
 import { Typography } from "../Typography";

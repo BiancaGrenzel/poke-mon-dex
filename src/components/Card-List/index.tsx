@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPokemons } from "../../services/api";
-import { useDataContext } from "../../store/context";
+import { useDataContext } from "../../context";
 import { Pokemon } from "../../types";
 import { filterPokemons } from "../../utils/filterPokemons";
 import Card from "../Card/index";
