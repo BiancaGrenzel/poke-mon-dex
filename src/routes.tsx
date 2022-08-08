@@ -5,22 +5,18 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
+import NotFound from "./pages/Not-Found";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <RoutesWrapper>
-        <Route path="app" element={<App />}>
-          <Route path="home" element={<Home />} />
+        <Route element={<App />}>
+          <Route path="app">
+            <Route path="home" element={<Home />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route
-          path="*"
-          element={
-            <div>
-              <p>There's nothing here!</p>
-            </div>
-          }
-        />
       </RoutesWrapper>
     </BrowserRouter>
   );
