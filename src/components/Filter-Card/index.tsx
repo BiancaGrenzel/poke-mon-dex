@@ -4,6 +4,8 @@ import { useDataContext } from "../../context";
 import { PokemonTypes } from "../../types";
 import FilterChip from "../Filter-Chip";
 import { Typography } from "../Typography";
+import ReactSwitch from "react-switch";
+import { colors } from "../../styles/tokens";
 
 const Types = [
   "bug",
@@ -27,7 +29,12 @@ const Types = [
 ];
 
 const FilterCard = () => {
-  const { filteredTypes, setFilteredTypes } = useDataContext();
+  const {
+    filteredTypes,
+    setFilteredTypes,
+    filterByFavorites,
+    setFilterByFavorites,
+  } = useDataContext();
 
   const filterTypes = (types: PokemonTypes) => {
     const oldFilteredTypes = filteredTypes;
@@ -38,19 +45,33 @@ const FilterCard = () => {
   };
 
   return (
-    <Box flexDirection="column" gap="md">
-      <Typography>Filtrar por Tipo</Typography>
-      <Box gap="sm" width="190px" flexWrap="wrap">
-        {Types.map((type) => {
-          return (
-            <FilterChip
-              pokemonType={type as PokemonTypes}
-              key={type}
-              onClick={() => filterTypes(type as PokemonTypes)}
-              isSelected={filteredTypes.find((t) => t === type) ? true : false}
-            />
-          );
-        })}
+    <Box flexDirection="column">
+      <Box flexDirection="column" gap="md">
+        <Typography>Filtrar por Tipo</Typography>
+        <Box gap="sm" width="190px" flexWrap="wrap">
+          {Types.map((type) => {
+            return (
+              <FilterChip
+                pokemonType={type as PokemonTypes}
+                key={type}
+                onClick={() => filterTypes(type as PokemonTypes)}
+                isSelected={
+                  filteredTypes.find((t) => t === type) ? true : false
+                }
+              />
+            );
+          })}
+        </Box>
+      </Box>
+      <Box flexDirection="column">
+        <Typography>Filtrar por Favoritos</Typography>
+        <ReactSwitch
+          onChange={() => setFilterByFavorites(!filterByFavorites)}
+          checked={filterByFavorites}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          onColor={colors.red}
+        />
       </Box>
     </Box>
   );

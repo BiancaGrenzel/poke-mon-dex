@@ -7,8 +7,14 @@ import Card from "../Card/index";
 import { ContainerCards } from "./style";
 
 const CardList = () => {
-  const { filteredTypes, allPokemons, setAllPokemons, search } =
-    useDataContext();
+  const {
+    filteredTypes,
+    allPokemons,
+    setAllPokemons,
+    search,
+    favoritePokemons,
+    filterByFavorites,
+  } = useDataContext();
   const [filteredPokemons, setFilteredPokemons] = useState<Pokemon[]>([]);
 
   useEffect(() => {
@@ -22,9 +28,11 @@ const CardList = () => {
       allPokemons: allPokemons,
       text: search,
       type: filteredTypes,
+      favorites: favoritePokemons,
+      filterByFavorite: filterByFavorites,
     });
     setFilteredPokemons([...(filtered || allPokemons)]);
-  }, [allPokemons, filteredTypes, search]);
+  }, [allPokemons, filteredTypes, search, filterByFavorites, favoritePokemons]);
 
   const renderPokemons = () => {
     return filteredPokemons.map((pokemon, index) => {

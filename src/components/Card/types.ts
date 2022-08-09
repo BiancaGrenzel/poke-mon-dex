@@ -5,6 +5,6 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   altPhoto?: string;
   srcPhoto?: string;
   pokemonNumber?: string;
-  pokemonName?: string;
+  pokemonName: string;
   pokemonType: PokemonTypes[];
 }
