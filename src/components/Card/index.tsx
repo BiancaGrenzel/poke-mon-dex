@@ -28,7 +28,6 @@ const Card = ({
     } else {
       setFavoritePokemons([...favoritePokemons, pokemonName]);
     }
-    console.log(favoritePokemons);
   };
 
   const Favorite = () => {
