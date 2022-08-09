@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const ContainerInput = styled.div`
-  width: 620px;
+  width: 60%;
   border-radius: ${({ theme }) => theme.sizes.md};
   border: none;
   background-color: ${({ theme }) => theme.colors.lightGray};
@@ -18,6 +18,7 @@ export const BaseInput = styled.input`
   height: 100%;
   color: ${({ theme }) => theme.colors.black};
   font-size: ${({ theme }) => theme.sizes.sm};
+  font-family: Titillium Web;
   &::placeholder {
     color: ${({ theme }) => theme.colors.darkGray};
   }
@@ -31,4 +32,3 @@ export const Icon = styled(FontAwesomeIcon)`
   height: ${({ theme }) => theme.sizes.sm};
   color: ${({ theme }) => theme.colors.red};
 `;
-

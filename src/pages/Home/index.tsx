@@ -2,13 +2,11 @@ import CardList from "../../components/Card-List";
 import FilterCard from "../../components/Filter-Card";
 import Input from "../../components/Input";
 import { Box, Section } from "../../layouts";
-import { useDataContext } from "../../store/context";
+import { useDataContext } from "../../context";
 
 const Home = () => {
-  const {
-    search,
-    setSearch,
-  } = useDataContext();
+  const { search, setSearch } =
+    useDataContext();
 
   return (
     <Section>

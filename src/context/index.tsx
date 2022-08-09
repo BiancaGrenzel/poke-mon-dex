@@ -13,6 +13,8 @@ export const DataContextProvider = ({ children }: IContext) => {
   const [filteredTypes, setFilteredTypes] = useState<PokemonTypes[]>([]);
   const [filteredPokemons, setFilteredPokemons] = useState<Pokemon[]>([]);
   const [allPokemons, setAllPokemons] = useState<Pokemon[]>([]);
+  const [favoritePokemons, setFavoritePokemons] = useState<string[]>([]);
+  const [filterByFavorites, setFilterByFavorites] = useState<boolean>(false);
   const [search, setSearch] = useState<string>("");
 
   return (
@@ -26,6 +28,10 @@ export const DataContextProvider = ({ children }: IContext) => {
         setAllPokemons,
         search,
         setSearch,
+        favoritePokemons,
+        setFavoritePokemons,
+        filterByFavorites,
+        setFilterByFavorites
       }}
     >
       {children}
@@ -43,6 +49,10 @@ interface IDataContext {
   setAllPokemons: (allPokemons: Pokemon[]) => void;
   search: string;
   setSearch: (search: string) => void;
+  favoritePokemons: string[];
+  setFavoritePokemons: (favoritePokemons: string[]) => void;
+  filterByFavorites: boolean;
+  setFilterByFavorites: (filterByFavorites: boolean) => void;
 }
 
 export const useDataContext = () => useContext(DataContext) as IDataContext;

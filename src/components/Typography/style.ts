@@ -50,4 +50,5 @@ export const StyledTypography = styled.p<StyledTypographyProps>`
   ${({ color }) => color && colorModifiers[color]};
   ${({ weight }) => weight && weightModifiers[weight]};
   margin: 0;
+  font-family: Titillium Web;
 `;
