@@ -5,10 +5,8 @@ import { Box, Section } from "../../layouts";
 import { useDataContext } from "../../context";
 
 const Home = () => {
-  const {
-    search,
-    setSearch,
-  } = useDataContext();
+  const { search, setSearch } =
+    useDataContext();
 
   return (
     <Section>

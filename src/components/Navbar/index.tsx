@@ -6,12 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-
 const Navbar = () => {
   const navigate = useNavigate();
   return (
     <Container>
-      <Box onClick={() => navigate('/app/home')}>
+      <Box onClick={() => navigate("/app/home")}>
         <Logo src={Pokeball} />
         <Typography variant="title" color="white" weight="bold">
           Pokédex
@@ -19,7 +18,11 @@ const Navbar = () => {
       </Box>
       <Box>
         <SynviaImage src={Synvia} />
-        <FontAwesomeIcon icon={faArrowRightFromBracket} color="#fff" size="lg"/>
+        <FontAwesomeIcon
+          icon={faArrowRightFromBracket}
+          color="#fff"
+          size="lg"
+        />
       </Box>
     </Container>
   );
