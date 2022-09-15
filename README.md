@@ -11,7 +11,8 @@
 
 ## Resumo do projeto
 Projeto com o intuito de criar uma pokedex, com filtragem de pokemons, seleção de favoritos e testes unitários.
-Link: ``https://singular-sunshine-ea91b7.netlify.app/``
+<br/>
+Link: https://singular-sunshine-ea91b7.netlify.app/
 
 <br/>
 
